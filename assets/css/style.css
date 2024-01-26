@@ -7,13 +7,22 @@
     --heliotrope-fade: #e766ec83;
     --periwinkle: #1a3a59;
     --smokey-emerald: #206d5e;
-  }
-  
-  /* set content highlight color and background */
-  ::selection {
+}
+
+/* set content highlight color and background */
+::selection {
     background-color: var(--bright-turquoise);
     color: var(--outer-space);
-  }
+}
+
+#oceanVideo {
+    position: static;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: .5;
+}
 /* element selectors  select all of that element type*/
 html {
     /* set 1rem to 10px instead of native 16px to make it easier to calculate font-size values for the rest of the page (e.g. 1.6rem is 16px, 2.0rem is 20px, etc.) */
@@ -78,10 +87,20 @@ p {
 }
 
 header {
-    width: 90%;
+    /* width: 90%;
     margin: 0 auto;
     padding: 2.5rem;
-    text-align: center;
+    text-align: center; */
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    position: relative;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    
 }
 
 section {
@@ -101,6 +120,14 @@ footer {
 }
 
 /* class selectors select all elements with that class */
+
+.logo {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
 
 .row {
     /* create main grid with flexbox, use negative margins to offset the padding on the .card-column class */
