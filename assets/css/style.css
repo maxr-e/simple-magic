@@ -4,6 +4,9 @@
     --bright-turquoise: #2aefcb;
     --gin: #e0eae4;
     --heliotrope: #e866ec;
+    --heliotrope-fade: #e766ec83;
+    --periwinkle: #1a3a59;
+    --smokey-emerald: #206d5e;
   }
   
   /* set content highlight color and background */
@@ -64,6 +67,12 @@ h7 {
     font-size: 1rem;
 }
 
+a {
+    color: rgb(29, 161, 29);
+    background-color: transparent;
+    text-decoration: none;
+}
+
 p {
     margin-bottom: 1rem;
 }
@@ -98,15 +107,78 @@ footer {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    margin-left: -1.5rem;
-    margin-right: -1.5rem;
 }
+
 .card-column {
     flex: 1 0 100%;
     padding: 1.5rem;
     transition: flex-basis 500ms linear;
     margin-bottom: 1.5rem;
 }
+
+.content {
+    border-style: dotted;
+    border-width: thick;
+    border-top-style: dotted;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-bottom-style: dotted;
+    border-color: red;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1rem;
+    background-color: var(--periwinkle);
+    /* margin-bottom: 1rem; */
+    /* margin-right: 1.5rem;
+    margin-left: 1.5rem; */
+    /* border: .5rem, solid, rgb(83, 135, 204); */
+    /* border-top: 1rem, solid, rgb(83, 135, 204); */
+}
+
+.testimonies {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.card-header {
+    margin-bottom: 0.625rem;
+    color: var(--smokey-emerald);
+    font-weight: 700;
+    line-height: 1.1; 
+}
+
+.card {
+    /* TODO: responsive cards moving to column on smaller screens */
+    border-style: dotted;
+    border-width: thick;
+    border-top-style: dotted;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-bottom-style: dotted;
+    border-color: var(--smokey-emerald);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    background-color: var(--heliotrope-fade);
+}
+/* make each code card a flexbox column to align and justify content within it
+.code-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100%;
+    padding: 2rem;
+    color: var(--heliotrope);
+  
+    /* outline is like border, but on the outside of the box instead of inside */
+    /* outline: 2px dashed var(--gin);
+    outline-offset: -2px;
+    transition: all 0.5s ease-in-out;
+  } */
 
 .justify-center {
     justify-content: center;
