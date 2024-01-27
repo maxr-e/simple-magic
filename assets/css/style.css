@@ -241,6 +241,7 @@ footer {
 .email-headroom {
     margin-top: 1rem;
     margin-bottom: 0rem;
+    color: var(--gin);
 }
 
 .justify-center {
