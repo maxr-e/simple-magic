@@ -1,12 +1,14 @@
 /* color scheme sourced from http://khroma.co/generator/ */
 :root {
     --outer-space: #33393f;
+    --pure: #f5f5f5;
     --bright-turquoise: #2aefcb;
     --gin: #e0eae4;
     --heliotrope: #e866ec;
     --heliotrope-fade: #e766ec83;
     --periwinkle: #1a3a59;
     --smokey-emerald: #206d5e;
+    --charcoal: #0e1622;
 }
 
 /* set content highlight color and background */
@@ -15,14 +17,6 @@
     color: var(--outer-space);
 }
 
-#oceanVideo {
-    position: static;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    opacity: .5;
-}
 /* element selectors  select all of that element type*/
 html {
     /* set 1rem to 10px instead of native 16px to make it easier to calculate font-size values for the rest of the page (e.g. 1.6rem is 16px, 2.0rem is 20px, etc.) */
@@ -32,16 +26,16 @@ html {
 body {
     /* Sans Serif font stack is implemented to help select the best font for each type of computer operating system */
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
-        Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    
     /* set body font size to 1.75rem, which is 1.75x more than the font-size of 10px, making it 17.5px  */
     font-size: 1.75rem;
     line-height: 1.5;
-    color: var(--gin);
-    background-color: var(--outer-space);
+    color: var(--outer-space);
+    background-color: var(--pure);
 }
-  
-h1,  h2,  h3,  h4,  h5,  h6, h7 {
+
+h2,  h3,  h4,  h5,  h6, h7 {
     margin-bottom: 0.625rem;
     color: var(--heliotrope);
     font-weight: 700;
@@ -50,6 +44,10 @@ h1,  h2,  h3,  h4,  h5,  h6, h7 {
 
 h1 {
     font-size: 4rem;
+    margin-bottom: 0.625rem;
+    color: var(--charcoal);
+    font-weight: 700;
+    line-height: 1.1;
 }
 
 h2 {
@@ -89,23 +87,28 @@ p {
 header {
     /* width: 90%;
     margin: 0 auto;
-    padding: 2.5rem;
-    text-align: center; */
-
+    padding: 2.5rem; */
+    /* text-align: center;
+    justify-content: center;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: row; */
 
     position: relative;
-    background: rgba(0, 0, 0, 0.5);
+    /* background: rgba(0, 0, 0, 0.5); */
     color: #f1f1f1;
-    width: 100%;
+    /* width: 100%; */
     
 }
 
 section {
-    width: 90%;
-    margin: 2.5rem auto;
+    position: relative;
+    height: 100vh;
+    /* width: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: 2.5rem auto; */
 }
 
 main {
@@ -123,10 +126,13 @@ footer {
 
 .logo {
     text-align: center;
-    justify-content: center;
+    /* background: rgba(255, 255, 255, 0.5); */
+    /* justify-content: center;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    align-self: center; */
+    
 }
 
 .row {
@@ -144,17 +150,17 @@ footer {
 }
 
 .content {
-    border-style: dotted;
-    border-width: thick;
-    border-top-style: dotted;
+    /* border-style: solid; */
+    /* border-width: thick;
+    border-top-style: solid;
     border-right-style: solid;
     border-left-style: solid;
-    border-bottom-style: dotted;
-    border-color: red;
-    border-radius: 8px;
+    border-bottom-style: solid;
+    border-color: rgb(36, 32, 32);
+    border-radius: 8px; */
     padding: 1rem;
     margin-top: 1rem;
-    background-color: var(--periwinkle);
+    /* background-color: var(--periwinkle); */
     /* margin-bottom: 1rem; */
     /* margin-right: 1.5rem;
     margin-left: 1.5rem; */
@@ -171,27 +177,38 @@ footer {
 
 .card-header {
     margin-bottom: 0.625rem;
-    color: var(--smokey-emerald);
+    color: var(--charcoal);
     font-weight: 700;
     line-height: 1.1; 
 }
 
 .card {
     /* TODO: responsive cards moving to column on smaller screens */
-    border-style: dotted;
-    border-width: thick;
-    border-top-style: dotted;
+    /* border-style: dotted; */
+    /* border-width: thick;
+    border-top-style: solid;
     border-right-style: solid;
     border-left-style: solid;
-    border-bottom-style: dotted;
+    border-bottom-style: solid;
     border-color: var(--smokey-emerald);
-    border-radius: 8px;
+    border-radius: 8px; */
     padding: 1rem;
     margin-top: 1rem;
     margin-left: .5rem;
     margin-right: .5rem;
-    background-color: var(--heliotrope-fade);
+    /* background-color: var(--outer-space); */
 }
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff6600;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+  }
+
 /* make each code card a flexbox column to align and justify content within it
 .code-card {
     display: flex;
@@ -200,31 +217,70 @@ footer {
     min-height: 100%;
     padding: 2rem;
     color: var(--heliotrope);
-  
+    
     /* outline is like border, but on the outside of the box instead of inside */
     /* outline: 2px dashed var(--gin);
     outline-offset: -2px;
     transition: all 0.5s ease-in-out;
-  } */
+} */
+
+.email-container {
+    text-align: center;
+    border-width: thick;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-bottom-style: solid;
+    border-color: rgb(36, 32, 32);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1rem;
+    background-color: var(--periwinkle);
+}
+
+.email-headroom {
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+}
 
 .justify-center {
     justify-content: center;
 }
 
 .header {
-
+    
 }
 
 .center {
-
+    
 }
 
 .t-1 {
-
+    
 }
 
 .t-2 {
-
+    
 }
 
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 1.5em; /* Adjust the font size as needed */
+    }
+}
 /* id selectors are an unique id to identify an element */
+
+#oceanVideo {
+    position: absolute;
+    /* right: 0;
+    bottom: 0; */
+    top: 0;
+    left: 0;
+    /* width: auto; */
+    height: auto;
+    min-width: 100%;
+    /* min-height: 100%; */
+    z-index:-1;
+    /* opacity: .5; */
+}
