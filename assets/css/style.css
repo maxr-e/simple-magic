@@ -113,7 +113,7 @@ section {
 
 main {
     width: 90%;
-    margin: 2rem auto;
+    margin: 6rem auto;
 }
 
 footer {
@@ -158,7 +158,10 @@ footer {
     border-bottom-style: solid;
     border-color: rgb(36, 32, 32);
     border-radius: 8px; */
-    padding: 1rem;
+    padding-top: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
     margin-top: 1rem;
     /* background-color: var(--periwinkle); */
     /* margin-bottom: 1rem; */
